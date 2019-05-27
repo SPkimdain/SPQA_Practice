@@ -25,9 +25,3 @@ WebUI.setEncryptedText(findTestObject('Object Repository/Page_Sparrow DAST/input
 
 WebUI.click(findTestObject('Object Repository/Page_Sparrow DAST/button_'))
 
-WebUI.click(findTestObject('Object Repository/Page_/div_'))
-
-WebUI.click(findTestObject('Object Repository/Page_  -/div_'))
-
-WebUI.click(findTestObject('Object Repository/Page_  -/div_ (1)'))
-
