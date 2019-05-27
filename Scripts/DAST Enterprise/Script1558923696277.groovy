@@ -13,15 +13,39 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.openBrowser('http://dastwin.fasoo.com:39000/login?redirect=%2Fdashboard')
 
 WebUI.navigateToUrl('http://dastwin.fasoo.com:39000/login?redirect=%2Fdashboard')
 
-WebUI.setText(findTestObject('Object Repository/Page_Sparrow DAST/input'), 'dain')
+WebUI.setText(findTestObject('Page_Sparrow DAST/input'), 'dain')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Sparrow DAST/input_1'), 'HeCM15nHKBI=')
+WebUI.setEncryptedText(findTestObject('Page_Sparrow DAST/input_1'), 'HeCM15nHKBI=')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Sparrow DAST/input_2'), 'HeCM15nHKBI=')
+WebUI.setEncryptedText(findTestObject('Page_Sparrow DAST/input_2'), 'HeCM15nHKBI=')
 
-WebUI.click(findTestObject('Object Repository/Page_Sparrow DAST/button_'))
+WebUI.click(findTestObject('Page_Sparrow DAST/button_'))
+
+WebUI.click(findTestObject('Page_/div_'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/button__limn-filter limn-toggle-filter'))
+
+WebUI.setText(findTestObject('Object Repository/Page_  -/input__main'), 'dain')
+
+WebUI.click(findTestObject('Object Repository/Page_  -/button_'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/button__limn-filter limn-toggle-filter'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/button_'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/li_'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/button_'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/button__limn-filter limn-toggle-filter'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/span_'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/li_'))
+
+WebUI.click(findTestObject('Object Repository/Page_  -/button_'))
 
