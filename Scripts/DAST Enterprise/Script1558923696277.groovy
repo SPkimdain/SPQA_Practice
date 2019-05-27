@@ -21,5 +21,3 @@ WebUI.setText(findTestObject('Page_Sparrow DAST/input'), 'dain')
 
 WebUI.setEncryptedText(findTestObject('Page_Sparrow DAST/input_1'), 'HeCM15nHKBI=')
 
-WebUI.setEncryptedText(findTestObject('Page_Sparrow DAST/input_2'), 'HeCM15nHKBI=')
-
