@@ -27,13 +27,13 @@ import static org.junit.Assert.*
 import java.util.regex.Pattern as Pattern
 import static org.apache.commons.lang3.StringUtils.join
 
-
+// Sparrow Vooster
 String url = "http://192.168.10.125:29000/"
 
 /*
  * 테스트 시 변경할 변수
  * page : 테스트 할 페이지
- * selectIndex : 검색 할 항목
+ * content : 검색 할 항목
  * list : 검색 키워드 데이터
  *
  * */
@@ -81,14 +81,13 @@ String btnReset = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DI
 // 드롭다운 인덱스
 int liIndex = 0
 
-// 취약점 목록 - 검색 모달창
+// 검색 모달창
 for (int index = 0; index < 6; index++) {
     // 1초 정지
     Thread.sleep(1000)
 
-    liIndex = (index + 1)
+    liIndex = index + 1
 	
-	// 취약점 명
     // 모달창 펼침
     selenium.click(modal)
 
