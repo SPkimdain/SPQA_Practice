@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>취약점 통합 관리 시스템 TC</description>
+   <name>Sparrow Vooster Search Filter TC_dain</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>92bdad2c-e528-4825-9d6d-73d2ef429117</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e8f6f912-74d0-46b9-8e4c-24b693a79166</id>
+      <masked>false</masked>
+      <name>textdata</name>
+   </variable>
+</TestCaseEntity>
