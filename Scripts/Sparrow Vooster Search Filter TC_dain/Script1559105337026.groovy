@@ -41,7 +41,7 @@ String url = "http://192.168.10.125:29000/"
 // 테스트 할 페이지 - 1 : 취약점 목록, 2 : 제품 목록, 0 : 레퍼런스 목록
 int page = 0
 // 검색 할 항목 - <취약점 목록> 1 : 취약점명, 2 : 제품명 | <제품 목록> 1 : 유형, 2 : 제품명 | <레퍼런스 목록> 2 : 레퍼런스명
-int selectIndex = 2
+int content = 2
 // 검색 키워드 데이터
 List<String> list = new ArrayList()
 list.add('Improper') // 포함
@@ -72,9 +72,9 @@ selenium = new WebDriverBackedSelenium(driver, baseUrl)
 
 // xpath
 String modal = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/BUTTON[1]/I[1]"
-String dropDown = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[" + String.valueOf(selectIndex) + "]/DIV[2]/A[1]/DIV[1]/B[1]"
-String select = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[" + String.valueOf(selectIndex) + "]/DIV[2]/DIV[1]/UL[1]"
-String textField = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV["+ String.valueOf(selectIndex) +"]/INPUT[1]"
+String dropDown = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[" + String.valueOf(content) + "]/DIV[2]/A[1]/DIV[1]/B[1]"
+String select = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[" + String.valueOf(content) + "]/DIV[2]/DIV[1]/UL[1]"
+String textField = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV["+ String.valueOf(content) +"]/INPUT[1]"
 String btnSearch = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV["+ String.valueOf(page+4) +"]/BUTTON[1]"
 String btnReset = "xpath=/HTML[1]/BODY[1]/MAIN[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[5]/BUTTON[2]"
 
