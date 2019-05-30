@@ -27,7 +27,7 @@ import static org.junit.Assert.*
 import java.util.regex.Pattern as Pattern
 import static org.apache.commons.lang3.StringUtils.join
 
-// 통합 클라우드
+// 통합 클라우드 검색 필터
 String url = 'https://54.250.198.183/'
 
 /*
@@ -44,17 +44,26 @@ String url = 'https://54.250.198.183/'
 String id = "cd8025@nate.com"
 String pw = "a1234567!"
 // 테스트 할 페이지 - 1 : 전체 프로젝트 목록, 2 : 전체 분석 목록
-int page = 1
-// 검색 할 항목 - <전체 프로젝트 목록> 1 : 프로젝트명 | <전체 분석 목록> 1 : 프로젝트명
-int content = 1
+int page = 2
+// 검색 할 항목 - <전체 프로젝트 목록> 1 : 프로젝트명, 2 : 전체 분석 수, 5 : 최근 검출 취약점 | <전체 분석 목록> 1 : 프로젝트명, 4 : 분석 체커 수, 5 : 검출 취약점
+int content = 5
 // 검색 키워드 데이터
 List<String> list = new ArrayList()
-list.add('Improper') // 포함
-list.add('improper') // 포함하지 않음
-list.add('improper') // 같음
-list.add('Imp') // 시작함
-list.add('per') // 끝남
-list.add('improper') // 패턴일치
+if(content == 1) {
+	list.add('a') // 포함
+	list.add('b') // 포함하지 않음
+	list.add('c') // 같음
+	list.add('d') // 시작함
+	list.add('e') // 끝남
+	list.add('f') // 패턴일치
+} else {
+	list.add('1') // =
+	list.add('2') // ≠
+	list.add('3') // >
+	list.add('4') // ≥
+	list.add('5') // <
+	list.add('6') // ≤
+}
 
 switch (page) {
     case '1':
@@ -80,7 +89,7 @@ selenium.type("xpath=/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/FORM[1]/DIV[2]/DIV[2]
 selenium.click("xpath=/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/FORM[1]/BUTTON[1]")
 
 
-// xpath
+// xpath (포함~패턴일치 | =~≤)
 String modal = 'xpath=/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/BUTTON[1]'
 
 String dropDown = ('xpath=/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[' + String.valueOf(content)) + ']/DIV[2]/A[1]/DIV[1]/B[1]'
@@ -109,7 +118,7 @@ for (int index = 0; index < 6; index++) {
     // 드롭다운 펼침
     selenium.click(dropDown)
 
-    // 포함~패턴일치 선택
+    // 포함~패턴일치 | =~≤ 선택
     selenium.click(((select + '/LI[') + String.valueOf(liIndex)) + ']')
 
     // 텍스트 필드에 입력
@@ -118,6 +127,8 @@ for (int index = 0; index < 6; index++) {
     // 검색 버튼
     selenium.click(btnSearch)
 }
+
+
 
 
 
