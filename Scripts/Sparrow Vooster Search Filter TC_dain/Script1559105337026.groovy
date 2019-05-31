@@ -39,16 +39,16 @@ String url = "http://192.168.10.125:29000/"
  * */
 
 // 테스트 할 페이지 - 1 : 취약점 목록, 2 : 제품 목록, 0 : 레퍼런스 목록
-int page = 0
+int page = 1
 // 검색 할 항목 - <취약점 목록> 1 : 취약점명, 2 : 제품명 | <제품 목록> 1 : 유형, 2 : 제품명 | <레퍼런스 목록> 2 : 레퍼런스명
-int content = 2
+int content = 1
 // 검색 키워드 데이터
 List<String> list = new ArrayList()
-list.add('Improper') // 포함
+list.add('improper') // 포함
 list.add('improper') // 포함하지 않음
 list.add('improper') // 같음
 list.add('Imp') // 시작함
-list.add('per') // 끝남
+list.add('Buffer') // 끝남
 list.add('improper') // 패턴일치
 
 switch(page){

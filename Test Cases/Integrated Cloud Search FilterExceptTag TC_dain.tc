@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Integrated Cloud Search Filter TC_dain_ing</name>
+   <name>Integrated Cloud Search FilterExceptTag TC_dain</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>f4f17655-efde-46e6-864e-7a66968250ae</testCaseGuid>
+   <testCaseGuid>37e52c35-da24-4369-9681-9d7d66456dec</testCaseGuid>
 </TestCaseEntity>
